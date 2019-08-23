@@ -1,0 +1,25 @@
+{
+	"data": {
+		 "filename": "0_1_2_days.csv",
+		 "columns": 
+                             {
+                                "numerical": ["orig_sales_order_line_num", "unit_price_amt", "item_wt_qty", "order_qty", "price_match_amt", "promo_amt", "po_line_num"],            
+                              "categorical": ["item_wt_uom_cd", "fulfmt_type_desc"], 
+                              "time_stamps": ["order_plcd_lcl_ts", "order_slot_lcl_start_ts", "epos_cmpl_lcl_dt"],
+                             "multiplicity": ["picked_qty", "nil_picked_qty"],
+                                   "target": ["pick_status_cd"],
+                                 "store_id": ["store_id"],
+                            "department_id": [  ],
+                            "category_nmbr": [  ]
+                               }
+                 }, 
+	"model": { 
+                  "max_depth": 6,                                     
+                        "eta": 0.3,                                         
+                     "silent": 1,                                       
+                  "objective": "multi:softprob",                     
+                  "num_class": 2,
+                   "save_dir": "./saved_models",
+                  "num_round": 100
+                  }	
+}
